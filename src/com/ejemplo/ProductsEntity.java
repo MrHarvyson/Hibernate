@@ -128,6 +128,22 @@ public class ProductsEntity {
     }
 
     @Override
+    public String toString() {
+        return "ProductsEntity{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", supplierId=" + supplierId +
+                ", categoryId=" + categoryId +
+                ", quantityPerUnit='" + quantityPerUnit + '\'' +
+                ", unitPrice=" + unitPrice +
+                ", unitsInStock=" + unitsInStock +
+                ", unitsOnOrder=" + unitsOnOrder +
+                ", reorderLevel=" + reorderLevel +
+                ", discontinued=" + discontinued +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

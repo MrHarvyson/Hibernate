@@ -176,6 +176,26 @@ public class OrdersEntity {
     }
 
     @Override
+    public String toString() {
+        return "OrdersEntity{" +
+                "orderId=" + orderId +
+                ", customerId='" + customerId + '\'' +
+                ", employeeId=" + employeeId +
+                ", orderDate=" + orderDate +
+                ", requiredDate=" + requiredDate +
+                ", shippedDate=" + shippedDate +
+                ", shipVia=" + shipVia +
+                ", freight=" + freight +
+                ", shipName='" + shipName + '\'' +
+                ", shipAddress='" + shipAddress + '\'' +
+                ", shipCity='" + shipCity + '\'' +
+                ", shipRegion='" + shipRegion + '\'' +
+                ", shipPostalCode='" + shipPostalCode + '\'' +
+                ", shipCountry='" + shipCountry + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

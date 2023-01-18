@@ -219,6 +219,30 @@ public class EmployeesEntity {
     }
 
     @Override
+    public String toString() {
+        return "EmployeesEntity{" +
+                "employeeId=" + employeeId +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", title='" + title + '\'' +
+                ", titleOfCourtesy='" + titleOfCourtesy + '\'' +
+                ", birthDate=" + birthDate +
+                ", hireDate=" + hireDate +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", region='" + region + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", country='" + country + '\'' +
+                ", homePhone='" + homePhone + '\'' +
+                ", extension='" + extension + '\'' +
+                ", photo=" + Arrays.toString(photo) +
+                ", notes='" + notes + '\'' +
+                ", reportsTo=" + reportsTo +
+                ", photoPath='" + photoPath + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

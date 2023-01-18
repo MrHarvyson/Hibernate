@@ -57,6 +57,16 @@ public class CategoriesEntity {
     }
 
     @Override
+    public String toString() {
+        return "CategoriesEntity{" +
+                "categoryId=" + categoryId +
+                ", categoryName='" + categoryName + '\'' +
+                ", description='" + description + '\'' +
+                ", picture=" + Arrays.toString(picture) +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
