@@ -1,0 +1,40 @@
+public static void ejercicio01(List listaProductos) {
+        Iterator<ProductsEntity> productsEntityIterator = listaProductos.iterator();
+        while (productsEntityIterator.hasNext()) {
+            ProductsEntity productsEntity = productsEntityIterator.next(); //nombre producto idproducto
+            SuppliersEntity suppliersEntity = productsEntity.getSuppliersBySupplierId(); //nombrecompañia
+            System.out.println("Nombre del producto: " + productsEntity.getProductName() + " ,id prodructo: " +
+                    productsEntity.getProductId() + ", nombre compañia: " + suppliersEntity.getCompanyName());
+        }
+    }
+
+public static void ejercicio02(List listaPedidos) {
+        Iterator<OrdersEntity> ordersEntityIterator = listaPedidos.iterator();
+
+        while (ordersEntityIterator.hasNext()) {
+            OrdersEntity ordersEntity = ordersEntityIterator.next(); //id del pedido
+            EmployeesEntity employeesEntity = ordersEntity.getEmployeesByEmployeeId(); // nombre del empleado
+            CustomersEntity customersEntity = ordersEntity.getCustomersByCustomerId(); // nombre cliente
+            System.out.println("Id del pedido: " + ordersEntity.getOrderId() + ", nombre del empleado: " + employeesEntity.getFirstName() + " " + employeesEntity.getLastName() + " ,nombre del cliente: " + customersEntity.getContactName());
+        }
+
+    }
+
+public static void ejercicio03(List listaEmpleado) {
+
+        Iterator<EmployeesEntity> employeesEntityIterator = listaEmpleado.iterator();
+
+        while (employeesEntityIterator.hasNext()) {
+            EmployeesEntity employeesEntity = employeesEntityIterator.next(); //nombre y apellido empleado
+            Iterator<EmployeesEntity> employeesEntityIterator2 = listaEmpleado.iterator();
+            while (employeesEntityIterator2.hasNext()) {
+                EmployeesEntity employeesEntity2 = employeesEntityIterator2.next(); //nombre y apellido empleado
+                if (employeesEntity2.getReportsTo() == employeesEntity.getEmployeeId()) {
+                    System.out.println("Nombre y apellido de empleado: " + employeesEntity2.getFirstName() + " " +
+                            employeesEntity2.getLastName() + " ,nombre y apellidos al que le tiene que reportar el informe: " +
+                            employeesEntity.getFirstName() + " " + employeesEntity.getLastName());
+                }
+            }
+        }
+
+    }

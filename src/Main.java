@@ -2,6 +2,7 @@
 import com.ejemplo.CategoriesEntity;
 import com.ejemplo.EmployeesEntity;
 import com.ejemplo.OrdersEntity;
+import com.ejemplo.ProductsEntity;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.*;
 
@@ -57,7 +58,7 @@ public class Main {
         //ejecutarConsultasParametros(session);
         //ejercicio(session);
         //session.close();
-        ejemploJoinEmpleadosPedidos(session);
+        //ejemploJoinEmpleadosPedidos(session);
 
     }
 
@@ -295,6 +296,12 @@ public class Main {
             System.out.println(pedido);
         }
     }
+
+    /*
+    Por cada producto de la lista, imprimir el id de producto y nombre de producto
+junto con el nombre de compañia del proveedor. Realizar el
+metodo de la forma mas eficiente posible, sin usar HQL.
+     */
 
 
 }
